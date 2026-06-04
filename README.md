@@ -22,6 +22,13 @@ You can also start it from the terminal:
 devcontainer up --workspace-folder .
 ```
 
+This starts the container, but it does not open an interactive shell. To enter
+the running container from the terminal:
+
+```sh
+devcontainer exec --workspace-folder . /bin/bash
+```
+
 If Docker Hub is slow or returns `ECONNRESET`, pull the image first and retry:
 
 ```sh
