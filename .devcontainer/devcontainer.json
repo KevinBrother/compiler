@@ -1,0 +1,13 @@
+{
+  "name": "PKU MiniC Compiler Dev",
+  "image": "maxxing/compiler-dev",
+  "workspaceMount": "type=bind,source=${localWorkspaceFolder},target=/root/compiler,consistency=cached",
+  "workspaceFolder": "/root/compiler",
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "ms-vscode.cpptools"
+      ]
+    }
+  }
+}
