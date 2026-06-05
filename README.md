@@ -1,6 +1,20 @@
-# doc
+# SysY Compiler
 
-[doc](https://pku-minic.github.io/online-doc/#/lv0-env-config/docker)
+Rust/Cargo-based SysY compiler project.
+
+## Development
+
+Build the compiler from the project root:
+
+```sh
+cargo build
+```
+
+Run the current template implementation:
+
+```sh
+cargo run -- -koopa input.c -o output.koopa
+```
 
 ## Devcontainer
 
@@ -36,22 +50,11 @@ docker pull maxxing/compiler-dev:latest
 devcontainer up --workspace-folder .
 ```
 
-### Run the C test
+## Online Judge Build
 
-From the project root, run:
-
-```sh
-sh scripts/test-hello-c.sh
-```
-
-Expected output:
-
-```text
-hello, compiler
-```
-
-After the devcontainer is running, the same test can be run inside it:
+When the repository root contains `Cargo.toml`, the judge builds the compiler
+with:
 
 ```sh
-devcontainer exec --workspace-folder . sh scripts/test-hello-c.sh
+cargo build --manifest-path Cargo.toml --release
 ```
