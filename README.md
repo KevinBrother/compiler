@@ -13,7 +13,7 @@ cargo build
 Run the current template implementation:
 
 ```sh
-cargo run -- -koopa input.c -o output.koopa
+cargo run -- -koopa input.c -o output/koopa
 ```
 
 ## Devcontainer
